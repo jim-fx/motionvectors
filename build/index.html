@@ -20,8 +20,161 @@
             opacity: 0.8;
         }
 
+        #filter-canvas {
+            opacity: 1;
+            z-index: 99;
+        }
+
         #webcam-canvas {
             opacity: 1;
+        }
+    </style>
+    <style>
+        .gui-wrapper {
+            z-index: 200;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            border-color: darkgray;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+            margin: 10px;
+        }
+
+        .gui-wrapper.gui-hidden {
+            opacity: 0;
+        }
+
+        .gui-elem-wrapper {
+            margin: 10px 5px;
+            border-bottom: solid thin black;
+        }
+
+        .gui-wrapper>.gui-elem-wrapper:last-child {
+            border: none;
+        }
+
+        .gui-elem-wrapper>input[type="range"] {
+            width: 100%;
+        }
+
+        .gui-elem-wrapper>input[type="checkbox"] {
+            margin-top: 0;
+        }
+
+        .gui-elem-wrapper>input {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .gui-elem-wrapper>label {
+            display: block;
+            font-size: 0.8em;
+        }
+
+        input[type="range"] {
+            height: 24px;
+            -webkit-appearance: none;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        input[type="range"]:focus {
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+            animate: 0.2s;
+            box-shadow: 0px 0px 2px #00000077;
+            background: #ffffff;
+            border-radius: 5px;
+            border: 0px solid #00000077;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            box-shadow: 0px 0px 2px #00000073;
+            border: 0px solid #00000077;
+            height: 15px;
+            width: 15px;
+            border-radius: 40px;
+            background: #ffffff;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -6px;
+        }
+
+        input[type="range"]:focus::-webkit-slider-runnable-track {
+            background: #ffffff;
+        }
+
+        input[type="range"]::-moz-range-track {
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+            animate: 0.2s;
+            box-shadow: 0px 0px 2px #00000077;
+            background: #ffffff;
+            border-radius: 5px;
+            border: 0px solid #00000077;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            box-shadow: 0px 0px 2px #00000077;
+            border: 0px solid #00000077;
+            height: 15px;
+            width: 15px;
+            border-radius: 40px;
+            background: #ffffff;
+            cursor: pointer;
+        }
+
+        input[type="range"]::-ms-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+
+        input[type="range"]::-ms-fill-lower {
+            background: #ffffff;
+            border: 0px solid #00000077;
+            border-radius: 10px;
+            box-shadow: 0px 0px 2px #00000077;
+        }
+
+        input[type="range"]::-ms-fill-upper {
+            background: #ffffff;
+            border: 0px solid #00000077;
+            border-radius: 10px;
+            box-shadow: 0px 0px 2px #00000077;
+        }
+
+        input[type="range"]::-ms-thumb {
+            margin-top: 1px;
+            box-shadow: 0px 0px 2px #00000077;
+            border: 0px solid #00000077;
+            height: 9px;
+            width: 15px;
+            border-radius: 40px;
+            background: #ffffff;
+            cursor: pointer;
+        }
+
+        input[type="range"]:focus::-ms-fill-lower {
+            background: #ffffff;
+        }
+
+        input[type="range"]:focus::-ms-fill-upper {
+            background: #ffffff;
         }
     </style>
 </head>
