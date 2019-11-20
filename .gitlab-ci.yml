@@ -1,0 +1,18 @@
+cache:
+  paths:
+    - node_modules/
+    - .yarn
+    
+pages:
+  image: node:12.12.0
+  stage: deploy
+  script:
+    - npm ci
+    - mkdir .build
+    - cp -r * .build
+    - mv .build public
+  artifacts:
+    paths:
+      - build
+  only:
+    - master

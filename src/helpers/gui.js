@@ -144,6 +144,8 @@ gui.prototype.add = function (object) {
             }
         }
 
+        object[key] = value;
+
         this.params[key] = value;
 
         this.createElement({
